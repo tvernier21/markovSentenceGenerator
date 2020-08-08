@@ -11,8 +11,8 @@
    
 Things to do:
 
-- not sure why I'm randomly saving the transition matrix and t distribution, could be useful for if i want to switch to R
+- not sure why I'm randomly saving the transition matrix and t distribution as a csv, could be useful for if i want to switch to R?
 - Save the kmeans cluster matrix, it will save a lot of time when rerunning the program
-- add verb, noun, etc. grouping
+- add verb, noun, etc. grouping (but creates huge transition matrices which is problematic)
 
    
