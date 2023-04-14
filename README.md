@@ -1,18 +1,17 @@
 # markovSentenceGenerator
 
-- Code won't run unless you download the GoogleNews-vector-negative300.bin file, which is ~1.5 gb
+A markov chain approach to generating sentences, admittedly a complete failure.
 
-- Also need these packages:
-   - sklearn
-   - numpy
-   - pandas
-   - nltk.corpus
-   - gensim
-   
-Things to do:
+Summary:
+1. Use spacy's nlp model to extract word properties (verb, noun, etc.)
+2. Use gensim.downloader to get Google's word2vec embedding model
+3. Cluster the embedded words, first filtering on word property, to group words by "similarity"
+4. Calculate the Markov Probability Matrix
+    - Find the probability that word i is followed by word i+1
+    - Each word is generalized to its property and cluster
+5. Use the probability matrix to simulate new sentences
 
-- not sure why I'm randomly saving the transition matrix and t distribution as a csv, could be useful for if i want to switch to R?
-- Save the kmeans cluster matrix, it will save a lot of time when rerunning the program
-- add verb, noun, etc. grouping (but creates huge transition matrices which is problematic)
 
-   
+TODO:
+- compartmentalize tasks to functions
+- save different parts of the code to make future runs mroe time efficient
